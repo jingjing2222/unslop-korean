@@ -3,7 +3,7 @@ name: unslop-korean
 description: Polish AI-looking interfaces with unslop's nine design passes and evidence-based Korean copy review. Use for unslop-korean, 한국어 UI 디자인 개선, 한국어 UX 문구 검토 and 윤문. Preserve existing non-Korean copy and foreign-language spans; copy-only requests do not authorize redesign.
 license: CC-BY-4.0 AND MIT
 metadata:
-  version: "3.2.0"
+  version: "4.0.0"
   author: "Damir Sokolovsky (upstream design); jingjing2222 (Korean adaptation)"
 ---
 

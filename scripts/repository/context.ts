@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 export const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 export const SKILL = join(ROOT, 'skills/unslop-korean');
 export const PLUGIN_NAME = 'unslop-korean';
-export const PLUGIN_VERSION = '3.2.0';
+export const PLUGIN_VERSION = '4.0.0';
 // Skill and evidence releases can reuse the same verified native executable.
 export const NATIVE_TOOL_VERSION = '3.2.0';
 export const TARGETS = ['darwin-arm64', 'darwin-x64', 'linux-arm64', 'linux-x64', 'win32-x64'];
