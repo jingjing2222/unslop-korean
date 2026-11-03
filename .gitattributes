@@ -1,2 +1,5 @@
+* text=auto eol=lf
+**/kuw -text
+**/kuw.exe -text
 # Preserve the upstream license text byte-for-byte, including its final blank line.
 skills/unslop-korean/LICENSE-CC-BY-4.0 whitespace=-blank-at-eof
