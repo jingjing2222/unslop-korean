@@ -8,7 +8,7 @@ export function validatePackage(check: Check): void {
   const frontmatterMatch = /^---\n([\s\S]*?)\n---\n/.exec(entry);
   check(frontmatterMatch !== null, 'Missing skill frontmatter');
   const frontmatter = frontmatterMatch?.[1] ?? '';
-  check(/^name: korean-ux-writing$/m.test(frontmatter), 'Unexpected skill name');
+  check(/^name: unslop-korean$/m.test(frontmatter), 'Unexpected skill name');
   check(/^description: \S.+/m.test(frontmatter), 'Missing discovery description');
   const skillVersion = /^  version:\s*["']?([^"'\s]+)["']?\s*$/m.exec(frontmatter)?.[1];
   check(skillVersion === PLUGIN_VERSION, 'Skill metadata version must match the plugin release');
@@ -47,7 +47,7 @@ export function validatePackage(check: Check): void {
   }
   const ignored = readFileSync(join(ROOT, '.gitignore'), 'utf8').split(/\r?\n/);
   check(ignored.includes('!/.agents/plugins/') && ignored.includes('!/.agents/plugins/marketplace.json'), 'Gitignore must retain the Codex marketplace exceptions');
-  for (const file of ['.agents/plugins/marketplace.json', 'skills/korean-ux-writing/scripts/kuw', 'skills/korean-ux-writing/scripts/kuw.cmd']) {
+  for (const file of ['.agents/plugins/marketplace.json', 'skills/unslop-korean/scripts/kuw', 'skills/unslop-korean/scripts/kuw.cmd']) {
     check(existsSync(join(ROOT, file)), `Missing package entry: ${file}`);
   }
   const marketplaceIgnored = spawnSync('git', ['check-ignore', '--no-index', '-q', '.agents/plugins/marketplace.json'], { cwd: ROOT });

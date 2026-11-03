@@ -7,7 +7,7 @@ import { test, type TestContext } from 'node:test';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const SKILL = join(ROOT, 'skills/korean-ux-writing');
+const SKILL = join(ROOT, 'skills/unslop-korean');
 const BIN = process.env.KUW_BIN ?? join(SKILL, 'scripts/bin', `${process.platform}-${process.arch}`, process.platform === 'win32' ? 'kuw.exe' : 'kuw');
 assert.ok(isAbsolute(BIN), 'KUW_BIN must be an absolute native executable path');
 const EXAMPLE = readFileSync(join(ROOT, 'evals/fixtures/minimal/audit.json'), 'utf8').trimEnd();

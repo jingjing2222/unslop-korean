@@ -1,11 +1,11 @@
 {
-  "name": "korean-ux-writing",
+  "name": "unslop-korean",
   "interface": {
-    "displayName": "Korean UX Writing"
+    "displayName": "Unslop Korean"
   },
   "plugins": [
     {
-      "name": "korean-ux-writing",
+      "name": "unslop-korean",
       "source": {
         "source": "local",
         "path": "./"

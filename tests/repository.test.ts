@@ -39,6 +39,19 @@ test('all repository code files stay within 200 lines', () => {
   assert.deepEqual(checkCodeLengths(ROOT), []);
 });
 
+test('HTML and CSS code have the same physical line limit as scripts', t => {
+  const root = mkdtempSync(join(tmpdir(), 'unslop-web-length-'));
+  t.after(() => rmSync(root, { recursive: true, force: true }));
+  execFileSync('git', ['init', '-q', root]);
+  writeFileSync(join(root, 'valid.html'), '<!-- line -->\n'.repeat(200));
+  writeFileSync(join(root, 'long.html'), '<!-- line -->\n'.repeat(201));
+  writeFileSync(join(root, 'long.css'), '/* line */\n'.repeat(201));
+  assert.deepEqual(checkCodeLengths(root), [
+    'long.css: 201 lines exceeds the 200-line code-file limit',
+    'long.html: 201 lines exceeds the 200-line code-file limit',
+  ]);
+});
+
 test('native source digest automatically covers new nested modules and their paths', t => {
   const root = mkdtempSync(join(tmpdir(), 'kuw-sources-'));
   t.after(() => rmSync(root, { recursive: true, force: true }));

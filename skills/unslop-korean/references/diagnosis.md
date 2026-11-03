@@ -1,5 +1,7 @@
 # 2. 의미 진단
 
+> 선택적으로 네이티브 감사 보고서를 작성할 때 쓰는 도구 안내다. 기본 스킬 실행은 unslop의 9개 패스를 따르며 이 보고서 절차를 요구하지 않는다. 한국어 문구 기준은 [korean.md](korean.md)를 따른다.
+
 먼저 1단계의 맥락 기록을 읽는다. 사용자에게 제공된 정보·사용처·실제 조건이 없는 항목은 그 질문으로 돌아가 조사한다. 아직 개선문을 만들거나 제품 문구를 수정하지 않는다.
 
 ## 지금 읽을 자료
@@ -9,7 +11,7 @@
 고정 증적을 가져와 적용할 출처의 확인 위치·주장·범위·예외를 읽는다.
 
 ```sh
-<skill-directory>/scripts/kuw evidence --out .reports/korean-ux-writing/sources.json
+<skill-directory>/scripts/kuw evidence --out .reports/unslop-korean/sources.json
 ```
 
 `<skill-directory>`는 설치된 스킬 디렉터리다. 원본 체크아웃에서는 `--source docs/evidence/sources.json`으로 같은 해시의 로컬 증적을 사용할 수 있다. 설치된 스킬 밖에 원본 레포가 있다고 가정하지 않는다. 실행 환경은 필요한 경우 [실행 안내](runtime.md)를 확인한다.
@@ -69,7 +71,7 @@
 안내가 늦거나 선행 맥락·선택·피드백·복구 수단이 빠진 문제는 `ux_findings`에 남긴다. 표현 문제와 흐름 문제를 구분하고, 처음 필요한 위치와 이유를 기록한다. 문서에서는 앞선 약속과 뒤의 조건을 연결한다. 현재 문구를 늘리는 방법부터 선택하지 않는다.
 
 ```sh
-<skill-directory>/scripts/kuw prepare .reports/korean-ux-writing/diagnosis.json --out .reports/korean-ux-writing/revision-1
+<skill-directory>/scripts/kuw prepare .reports/unslop-korean/diagnosis.json --out .reports/unslop-korean/revision-1
 ```
 
 `prepare`는 진단과 사용자 관점 기록을 검사한 뒤 새 폴더에 `checkpoint.json`, 작업용 `user-perspective.json`, `audit.json`을 만든다. 원문·사용처 연결과 결정 항목의 뼈대, 열린 흐름 문제는 도구가 옮긴다. 판정·개선문·근거는 채우지 않는다. 기존 폴더는 덮어쓰지 않는다.

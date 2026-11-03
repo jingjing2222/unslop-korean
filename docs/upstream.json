@@ -1,0 +1,57 @@
+{
+  "repository": "https://github.com/heydamir/unslop",
+  "commit": "a6f121eee5f29c2f74976b75456feae8b66afb3a",
+  "license": "CC-BY-4.0",
+  "unchanged_design_passes": {
+    "1": "972354ac77c2cc4ff11491ec8379bfe8a3fcda829d315ac4e4e8793967cf5e4c",
+    "2": "8d8635e46f95efc0322ae1ab52c563751270bbcfe3e98cf81cf0976d24c44182",
+    "3": "3a9b120eacff1dc70340c76d7e484b83905b52d93328287e96f9f6098a2757e8",
+    "6": "d0fcf8a8a86ed1aa939fe3df5ef9cfa5914e9fff395ed75ec28893095ebcb0e9",
+    "7": "a248bd6d76c611d3d38969d05f28c274cbfc4705f4160b2372de33acb5cb823a",
+    "8": "b7b9e66fdcf6d7b7cef6edad9c2b4aa8a128b35beaf37d0c79623e0c076e9482",
+    "9": "25acb306cc00ad5759a1a63387d61438128790ea2032585edf339251912ce850"
+  },
+  "unchanged_assets": {
+    "LICENSE-CC-BY-4.0": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+    "UPSTREAM.cff": "05a1d33a8c94660a6240afa2adf2e0331abeccf178bf00827b8ebd7a4796fb11",
+    "LICENSE-MIT": "8824671dd3ff362243e5fe140a9788977c59d1e2e25c38a2a991f21b8fcc62b3",
+    "references/visuals.md": "7247da579d2d95ace1e051b867c757bd1e05aa02f3ab8dea0ead4cd4bf14d7d7",
+    "references/effects.md": "ded4f679e22843a8f68860e6cda0396fa8b8fa27202400e08337143b485c86a4",
+    "references/refs/story-dashboard-frames.webp": "cfbf837e40b7626d5a5789dbce54f5c197aab303aa350d13a042048310717137",
+    "references/refs/beacon-engraving.webp": "44e7680e9c944f03c8fe45df999bdf74077a106925a8189eebf89e751e306e5b",
+    "references/refs/meadow-3d.webp": "84f526b68021a06fc6d32f162406fab6cc8074da1ef76d2ae4530e1b58219b14",
+    "references/refs/unslop-hero-after.webp": "92b2d796c5b6116a2039f5ca2b0f3edf700c92b41846b11b9501a4e32f72af6e",
+    "references/refs/unslop-dashboard-after.webp": "48067794f86b43dab20515b3810f245d67bff05d10bfa83c0f5885bee93cea52",
+    "scripts/snapshot.mjs": "0a5f2511d922bd5bd0df56e70e72d9e349695f2464f9b93d0bda3ef8a58c6e48"
+  },
+  "story_equivalence": {
+    "steps": [
+      "Spacing",
+      "Color and icons",
+      "Type and copy",
+      "Details"
+    ],
+    "stage_parameters": {
+      "FRAME": {
+        "width": 1080,
+        "height": 1080
+      },
+      "play": false,
+      "VIEW": 0.75,
+      "left": 0,
+      "top": 0,
+      "pageWidth": 1440,
+      "pageHeight": 900,
+      "scale": 1,
+      "file": "/demo/story.html",
+      "root": "/demo"
+    },
+    "runtime_sha256": "71a930da86a816571062de95fc4a1b5d74aaddeea8e89e0a821d342c559bf353",
+    "stage_sha256": "a6be479970b34b94c0d47ac7d5a0327f28dfc8bc47b20b909662a8716aeddecc"
+  },
+  "unchanged_repository_assets": {
+    "examples/dashboard.html": "063e4ada46ce0fe878f555556f2cfbc6f28c9b97d7cee326e002a86b5bdcb8bc",
+    "examples/hero.html": "3d28548e44b928ba13704e44251f334e93cc4224a090ae865f4c69b868b95d08",
+    "examples/assets/blob.webp": "eb1e1e40c5a26ec64f9e518c91cd1f111e7b2946d3042f3b956ab2c128b576b1"
+  }
+}

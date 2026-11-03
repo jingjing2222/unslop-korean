@@ -1,5 +1,7 @@
 # 3. 윤문
 
+> 선택적으로 네이티브 감사 보고서를 작성할 때 쓰는 도구 안내다. 기본 스킬 실행은 unslop의 9개 패스를 따르며 이 보고서 절차를 요구하지 않는다. 한국어 문구 기준은 [korean.md](korean.md)를 따른다.
+
 `kuw prepare`가 만든 폴더의 `audit.json`과 `user-perspective.json`에서 작업한다. 원문·사용처 ID를 다시 옮겨 적지 않는다. 도구가 만든 결정 항목에 판정·개선문·이유·사용처별 근거를 채운다. `checkpoint.json`과 보고서의 `checkpoint_ref`·`checkpoint_sha256`은 그대로 둔다. 진단을 바꿔야 하면 2단계에서 새 기록을 준비한다.
 
 이 단계부터 [규칙](rules.json)의 필요한 `KO-*`와 그 출처를 읽고 대안을 만든다.

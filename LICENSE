@@ -1,21 +1,40 @@
-MIT License
+Unslop Korean — license scope
 
+This repository contains material under different licenses. It is not entirely
+MIT-licensed.
+
+Unslop design guidance, reference images, snapshot/story scripts and adaptations
+-------------------------------------------------------
+Original work: unslop by Damir Sokolovsky (@heydamir)
+Source: https://github.com/heydamir/unslop
+Author: https://x.com/heydamir
+License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+Full terms, including warranty disclaimers:
+  skills/unslop-korean/LICENSE-CC-BY-4.0
+Attribution, exact source version, affected files and modifications:
+  skills/unslop-korean/UPSTREAM.md
+Original citation metadata:
+  skills/unslop-korean/UPSTREAM.cff
+
+The derived SKILL.md, upstream-derived references, examples and snapshot/story scripts
+retain CC BY 4.0,
+including our modifications to those files. Preserve attribution, the source
+link, license notice and indications of changes when sharing them. This
+adaptation is not endorsed by the original author.
+
+Original Korean guidance and project code
+----------------------------------------
 Copyright (c) 2026 jingjing2222
+License: MIT
+Full terms, including the copyright notice and warranty disclaimer:
+  skills/unslop-korean/LICENSE-MIT
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+This covers the independently authored Korean copy guides, rule and diagnostic
+catalogs, audit tooling, tests and project documentation. It does not relicense
+upstream-derived design files, reference images or external source publications.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Third-party runtime components and source publications
+-----------------------------------------------------
+Runtime notices remain in skills/unslop-korean/scripts/bin/<target>/licenses/.
+External evidence publications retain their respective terms. Links and source
+summaries do not grant rights to reproduce those publications.

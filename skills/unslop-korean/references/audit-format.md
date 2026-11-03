@@ -1,5 +1,7 @@
 # Audit report contract — version 2
 
+> 선택적으로 네이티브 감사 보고서를 작성할 때 쓰는 도구 안내다. 기본 스킬 실행은 unslop의 9개 패스를 따르며 이 보고서 절차를 요구하지 않는다. 한국어 문구 기준은 [korean.md](korean.md)를 따른다.
+
 This report records the declared funnel, intended meaning, current Korean reading,
 and revision decision at every discovered usage site. Assume a product written in
 Korean with no English source. The report does not require or infer a translation
@@ -44,7 +46,7 @@ site with that meaning. Save the completed review as `diagnosis.json`, with
 `complete: false`:
 
 ```sh
-/path/to/korean-ux-writing/scripts/kuw prepare /path/to/diagnosis.json --out /path/to/revision-1
+/path/to/unslop-korean/scripts/kuw prepare /path/to/diagnosis.json --out /path/to/revision-1
 ```
 
 This validates context, funnel, inventory, meaning contexts and diagnosis before
@@ -73,7 +75,7 @@ mapping and the reason for new evidence still need substantive review.
 After revision, run:
 
 ```sh
-/path/to/korean-ux-writing/scripts/kuw audit /path/to/revision-1/audit.json --require-checkpoint --require-complete
+/path/to/unslop-korean/scripts/kuw audit /path/to/revision-1/audit.json --require-checkpoint --require-complete
 ```
 
 For partial results, omit only `--require-complete`; retain `--require-checkpoint`.

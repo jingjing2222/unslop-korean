@@ -4,8 +4,8 @@ import { dirname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 export const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
-export const SKILL = join(ROOT, 'skills/korean-ux-writing');
-export const PLUGIN_NAME = 'korean-ux-writing';
+export const SKILL = join(ROOT, 'skills/unslop-korean');
+export const PLUGIN_NAME = 'unslop-korean';
 export const PLUGIN_VERSION = '3.2.0';
 // Skill and evidence releases can reuse the same verified native executable.
 export const NATIVE_TOOL_VERSION = '3.2.0';

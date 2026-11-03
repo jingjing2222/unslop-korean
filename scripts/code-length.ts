@@ -6,6 +6,7 @@ const CODE_EXTENSIONS = new Set([
   '.ts', '.tsx', '.mts', '.cts', '.js', '.jsx', '.mjs', '.cjs',
   '.py', '.sh', '.bash', '.zsh', '.cmd', '.bat', '.ps1',
   '.c', '.h', '.cpp', '.hpp', '.rs', '.go', '.swift',
+  '.html', '.htm', '.css', '.scss', '.sass', '.less',
 ]);
 
 /** Count the final unterminated line too; a trailing newline is not another line. */

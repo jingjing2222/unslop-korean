@@ -34,7 +34,7 @@ if (runtimePack) {
     throw new Error('Runtime pack must match the selected target and scriptc 0.4.0');
   }
 }
-const outDir = resolve(root, 'skills/korean-ux-writing/scripts/bin', target);
+const outDir = resolve(root, 'skills/unslop-korean/scripts/bin', target);
 mkdirSync(outDir, { recursive: true });
 const output = resolve(outDir, platform === 'win32' ? 'kuw.exe' : 'kuw');
 const packageInfo = JSON.parse(readFileSync(resolve(root, 'node_modules/scriptc/package.json'), 'utf8'));

@@ -35,3 +35,7 @@ locations. It is not needed for normal installed use. `--version` prints the
 plugin tool version; `--help` lists the commands. Each executable's adjacent
 `build.json` records its source and binary hashes, and `licenses/` contains the
 notices shipped with its compiled runtime.
+
+## 화면 저장과 영상
+
+`scripts/snapshot.mjs`와 `scripts/story.mjs`는 원본 unslop의 Node.js·Playwright 도구다. 실행할 프로젝트에서 `pnpm add -D playwright`와 `pnpm exec playwright install chromium`으로 준비한다. 영상 제작에는 PATH의 ffmpeg가 추가로 필요하다. 이 의존성은 위 한국어 근거 조회·감사 실행 파일에는 필요하지 않다.

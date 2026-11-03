@@ -1,7 +1,9 @@
 # Development
 
-Plugin users install the bundled executables through Codex or Claude Code. The
-tools below are only needed when changing and rebuilding this repository.
+Plugin users install through Codex or Claude Code. Korean evidence/audit tools
+are native executables. Optional upstream snapshot/story features use Node.js
+and Playwright, plus ffmpeg for video. The compiler toolchain below is needed
+only when changing and rebuilding the Korean native tools.
 
 - Node.js 24 or later runs development scripts and the test harness.
 - pnpm 11.17.0 manages dependencies; `pnpm-lock.yaml` pins their versions.
@@ -58,7 +60,7 @@ companion requirement: the file is resolved relative to the report directory,
 its links and declared coverage are checked, and open findings must remain in
 the final audit. Authorized new copy uses a separate `additions` collection;
 original inventory and diagnosis remain unchanged. Existing v2 reports need
-the structured companion described in [the report contract](../skills/korean-ux-writing/references/audit-format.md).
+the structured companion described in [the report contract](../skills/unslop-korean/references/audit-format.md).
 `kuw prepare` validates a pre-edit report and creates a self-contained checkpoint,
 working companion and decision scaffolding in a new directory. Final
 `kuw audit --require-checkpoint` checks saved originals, diagnoses, baseline paths,
@@ -74,20 +76,31 @@ Writing criteria belong in [the evidence documentation](evidence/README.md).
 Packaging changes must preserve the distinction between product facts, UX
 criteria, and Korean-language criteria.
 
-## Staged skill loading
+## Unslop is the base
 
-The skill entrypoint routes context discovery, meaning diagnosis, revision and
-verification into separate guides. Context discovery saves its findings before
-loading writing criteria or the audit schema. Later stages reuse those findings
-and return to a specific unanswered question when evidence is missing. A stage
-handoff is not a user approval gate.
+The entrypoint retains unslop's audit, direction, nine passes, check and report.
+Korean writing criteria replace its English Copy pass and related signs/checks.
+`references/korean.md` maps that pass to the existing evidence catalogs. It does
+not route the agent through a separate four-stage workflow or require JSON
+reports, `kuw prepare`, or a final native audit during ordinary design work.
 
-The workflow organization follows the requested example of
-[REA's skill](https://github.com/morluto/rea/blob/main/.agents/skills/reverse-engineer-anything/SKILL.md):
-start from a focused overview, expand around unanswered questions, retain evidence
-and unknowns, and load relevant guides when needed. REA is an organization
-reference, not a source of UX or Korean writing rules or a runtime dependency.
-Report version 2 and the pinned writing evidence remain unchanged; checkpoint
-version 1 wraps the pre-edit report and companion. Check
-actual agent reads and edits in behavioral evaluations; a passing report cannot
-prove that the stages were followed in order.
+The existing native audit APIs and their optional manuals remain available for
+explicit structured-report work and regression testing. They are not prerequisites
+for unslop's Copy pass. `kuw evidence` is the native source-registry loader used
+by that pass. The executable keeps its independent Korean UX Writing identity
+and version; no report migration or binary rebuild is needed for the skill rename.
+
+[Upstream attribution](../skills/unslop-korean/UPSTREAM.md) records the original
+commit, CC BY 4.0 scope and adaptation changes. `upstream.json` pins unchanged
+design passes, reference assets and full license texts. Validation checks those
+bytes and package links, not whether a design or phrase is good.
+
+The upstream snapshot and story scripts run with Node.js and Playwright; story
+video rendering also requires ffmpeg. These keep the upstream runtime. The story implementation is split by responsibility to keep
+each code file below 200 lines. Equivalence tests compare its generated browser
+program and stage with the pinned upstream output, including the author credit.
+Korean evidence and report version 2 are unchanged.
+
+Use the integrated scenario in [behavioral evaluations](../evals/README.md) to
+inspect the actual agent decisions and artifacts. Native report tests establish
+only the separate reporting invariants, not the skill's semantic performance.

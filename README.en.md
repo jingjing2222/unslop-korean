@@ -1,84 +1,69 @@
-# Korean UX Writing
+# Unslop Korean
 
 [한국어](README.md) · English
 
-A skill that reviews and improves Korean frontend copy from the user’s perspective. It checks whether the information users have actually received helps them understand what to do next and what to expect. No English source text is needed.
+A Korean adaptation of [unslop](https://github.com/heydamir/unslop) that keeps its UI improvement structure and replaces the English copy-editing layer with Korean criteria. It works through spacing, color, icons, copy, type, layout, details, visuals and motion.
 
-The review uses published UX guidance and Korean-language references. If earlier steps have not provided the context users need, it identifies the flow problem before refining the wording.
+Korean copy review starts with the user's available information and complete task, checks meaning, then refines expression. It uses the existing published UX and Korean-language evidence; no English original is needed.
 
 ## Install
 
-Install as a Codex or Claude Code plugin.
-
-### Codex
-
-Run these commands in order in your terminal:
+In a Codex terminal:
 
 ```sh
-codex plugin marketplace add jingjing2222/korean-ux-writing
-codex plugin add korean-ux-writing@korean-ux-writing
+codex plugin marketplace add jingjing2222/unslop-korean
+codex plugin add unslop-korean@unslop-korean
 ```
 
-### Claude Code
-
-Run these commands one at a time in a Claude Code conversation. The second command opens a panel where you choose the installation scope.
+In a Claude Code conversation:
 
 ```text
-/plugin marketplace add jingjing2222/korean-ux-writing
-/plugin install korean-ux-writing@korean-ux-writing
+/plugin marketplace add jingjing2222/unslop-korean
+/plugin install unslop-korean@unslop-korean
 ```
 
-After installing, start a new conversation to request a review. The plugin is distributed through this repository’s marketplace and is not listed in either product’s official plugin directory.
+Start a new conversation after installation. Distribution uses this repository's marketplace, not either product's official plugin catalog. Korean evidence and audit tools are bundled as native executables.
 
-## Try it
+## Use
 
-To review the entire frontend:
+For design and Korean copy together:
 
 ```text
-Use korean-ux-writing to review all Korean copy in this frontend.
-For each string, record the original, the final wording, and the reasons and
-sources for the decision. Apply the changes to the code.
+Use unslop-korean to polish this dashboard.
+Keep its features and content, and review Korean copy across the surrounding user journey.
 ```
 
-To start with a specific flow:
+For copy alone:
 
 ```text
-Use korean-ux-writing to improve the copy in the signup flow.
-Review everything from the entry screen through error recovery and completion.
+Use unslop-korean to review and polish only the Korean copy in the signup flow.
 ```
 
-## How it works
+The skill audits the screen, sets a product-specific direction, then applies nine passes. Screens that already work receive only necessary changes. Copy-only requests do not change the visual design.
 
-1. **The agent reviews the screens with the user’s goal in mind.** It follows the journey from the first screen through choices, cancellation, error recovery, and completion. At each step, it checks what users have been told and what they can expect to happen.
-2. **It finds where the copy appears.** It collects button labels, form instructions, errors, empty states, notifications, and accessibility text, and records when and where each item appears.
-3. **It identifies unclear wording and steps where information is missing.** If users lack information they need before making a choice, it proposes adding that information at the first step where it is needed. It does not assume users know what developers know or count a longer explanation in the current copy as a fix for an earlier gap.
-4. **It checks whether the wording matches the user’s goal and what the product actually does.** It looks for words that are unsuitable or unclear in context, even when the grammar is correct. It reviews the meaning of shared copy wherever it appears, resolves mismatches, and then polishes the sentences.
-5. **It compares the original and final wording.** It records both, along with the reasons and sources for each decision. It also checks rendered screens where the environment allows.
+## Korean copy review
 
-Every item is marked **change, keep, or hold**. The agent preserves actual product behavior, variables, amounts, durations, conditions, and other essential details. If the copy misstates how the product works, it corrects the wording using verified facts. When information is missing, it puts the item on hold and records why and what still needs to be checked.
+Review the user's goal, earlier guidance, current choice and later result. Assess meaning at each usage site and record **change, keep or hold**, with reasons. Save the diagnosis before editing, then check the same paths again.
 
-## Where the guidance comes from
+Only existing Korean is polished. Other languages and foreign-language spans in mixed text are preserved. Translation, editing other languages and new content require separate requests. Greetings, exclamation marks and periods are not blanket violations, and no single tone is imposed on every sentence.
 
-The [reference documentation](docs/evidence/README.md) links to the original sources and records their scope and exceptions. It is maintained separately from the installed skill.
+When prerequisite information is missing, identify where it first needs to appear. Retain unresolved flow problems and unverified screens in the result even after copy edits are finished. Distinguish agent review from observed participant testing.
 
-- **UX references** inform what a particular situation needs to communicate.
-- **Korean-language references** help assess whether the wording fits its context and guide revisions.
-- **Product code** establishes the actual behavior and conditions.
+In the [evidence documentation](docs/evidence/README.md), UX sources support what to communicate and when; Korean sources support expression. Product code establishes actual behavior. Unslop's design suggestions are not Korean writing authorities.
 
-Official guidance, usability findings, and expert recommendations are treated as different kinds of evidence. The skill does not impose the same brand voice or Korean sentence-ending style on every product.
+Screen snapshots and before/after videos use the original unslop Node.js and Playwright scripts. Install these dependencies in the project where you use them. Video rendering also needs ffmpeg on PATH.
 
-## Scope
+```sh
+pnpm add -D playwright
+pnpm exec playwright install chromium
+```
 
-This skill polishes existing Korean UI copy. It preserves copy in other languages and foreign-language text within Korean sentences. Translation, editing another language, or writing new content requires a separate request.
+[Skill instructions](skills/unslop-korean/SKILL.md) · [Supported platforms](skills/unslop-korean/references/runtime.md) · [Development](docs/development.md)
 
-The review also records inaccessible screens and unresolved flow problems. An agent’s preliminary review is kept distinct from usability testing with real participants.
+Original design examples are in [examples](examples). Their English copy remains unchanged; they are visual design examples.
 
-See [SKILL.md](skills/korean-ux-writing/SKILL.md) for the workflow and completion criteria.
+## Attribution and licenses
 
-[Supported platforms](skills/korean-ux-writing/references/runtime.md) · [Development](docs/development.md)
+Original unslop was created by [Damir Sokolovsky](https://x.com/heydamir). Its design guidance, reference images, snapshot/story scripts, examples and adaptations retain [CC BY 4.0](skills/unslop-korean/LICENSE-CC-BY-4.0). Redistribution must retain author credit, the source link, license and change notice. See [attribution and changes](skills/unslop-korean/UPSTREAM.md) for scope.
 
-## License
-
-The code, documentation, and other original work created for this repository are covered by the [MIT License](LICENSE). This repository’s MIT License does not cover the external documents cited here. When using those documents, follow each document’s own terms of use.
-
-Bundled runtime licenses are included in the `licenses/` directory beside each executable.
+This project's existing Korean guidance and original code remain under [MIT](skills/unslop-korean/LICENSE-MIT). External evidence documents retain their own terms. Runtime licenses are in `licenses/` beside each executable.

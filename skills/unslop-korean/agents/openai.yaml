@@ -1,0 +1,4 @@
+interface:
+  display_name: "Unslop Korean"
+  short_description: "Polish UI design and Korean copy in context"
+  default_prompt: "Use $unslop-korean to polish this interface and review its Korean copy across the user journey."

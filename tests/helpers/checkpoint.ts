@@ -7,7 +7,7 @@ import { type TestContext } from 'node:test';
 import { fileURLToPath } from 'node:url';
 
 export const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
-const SKILL = join(ROOT, 'skills/korean-ux-writing');
+const SKILL = join(ROOT, 'skills/unslop-korean');
 const BIN = process.env.KUW_BIN ?? join(SKILL, 'scripts/bin', `${process.platform}-${process.arch}`, process.platform === 'win32' ? 'kuw.exe' : 'kuw');
 export const read = (path: string): any => JSON.parse(readFileSync(path, 'utf8'));
 export const save = (path: string, value: unknown) => writeFileSync(path, JSON.stringify(value, null, 2) + '\n');

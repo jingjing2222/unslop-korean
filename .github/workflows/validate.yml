@@ -43,7 +43,7 @@ jobs:
       - name: Test the shipped executable
         run: pnpm test
       - name: Remove old bundles before rebuilding this host
-        run: node --input-type=module -e "import { rmSync } from 'node:fs'; rmSync('skills/korean-ux-writing/scripts/bin', { recursive:true, force:true });"
+        run: node --input-type=module -e "import { rmSync } from 'node:fs'; rmSync('skills/unslop-korean/scripts/bin', { recursive:true, force:true });"
       - run: pnpm build
         env:
           MACOSX_DEPLOYMENT_TARGET: '14.0'
@@ -52,12 +52,12 @@ jobs:
       - name: Verify pinned evidence download with the native executable
         shell: bash
         run: |
-          executable="skills/korean-ux-writing/scripts/bin/${{ matrix.target }}/kuw"
+          executable="skills/unslop-korean/scripts/bin/${{ matrix.target }}/kuw"
           if [ '${{ runner.os }}' = 'Windows' ]; then executable="${executable}.exe"; fi
           "$executable" evidence --out .reports/pinned-sources.json
       - uses: actions/upload-artifact@v4
         with:
           name: native-${{ matrix.target }}
-          path: skills/korean-ux-writing/scripts/bin/${{ matrix.target }}/
+          path: skills/unslop-korean/scripts/bin/${{ matrix.target }}/
           if-no-files-found: error
           retention-days: 7

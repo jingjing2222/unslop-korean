@@ -1,5 +1,7 @@
 # 4. 재검증
 
+> 선택적으로 네이티브 감사 보고서를 작성할 때 쓰는 도구 안내다. 기본 스킬 실행은 unslop의 9개 패스를 따르며 이 보고서 절차를 요구하지 않는다. 한국어 문구 기준은 [korean.md](korean.md)를 따른다.
+
 1단계의 과업·예상과 3단계의 결정·diff를 바탕으로 같은 과업을 다시 따라간다. 수정 전 기록을 덮어쓰지 않고 결과를 `recheck`에 남긴다. 기존 경로를 재검토한 기록에는 `original_path_id`로 원래 `paths`의 ID를 연결한다. 새 경로에는 없는 원래 ID를 만들지 않는다. 원문·진단·행동 전 기록의 보존과 경로 ID별 재검토 누락은 마지막에 도구로 검사한다.
 
 ## 해결했다고 한 차이를 다시 확인한다
@@ -21,7 +23,7 @@
 ## 감사와 결과 보고
 
 ```sh
-<skill-directory>/scripts/kuw audit .reports/korean-ux-writing/revision-1/audit.json --require-checkpoint --require-complete
+<skill-directory>/scripts/kuw audit .reports/unslop-korean/revision-1/audit.json --require-checkpoint --require-complete
 ```
 
 [감사 형식](audit-format.md)에 따라 결정을 완성한다. 해결하지 못한 `ux_findings`와 실행하지 못한 검증은 `unresolved`에도 남긴다. 부분 검토는 `complete: false`로 두고 위 명령에서 `--require-complete`만 뺀다. `--require-checkpoint`는 유지한다. 완료 검사를 통과시키려고 미확인 범위를 없애지 않는다.

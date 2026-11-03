@@ -4,6 +4,7 @@ import { ROOT } from './repository/context.ts';
 import { validateEvidence } from './repository/evidence.ts';
 import { validatePackage } from './repository/package.ts';
 import { validateNative } from './repository/native.ts';
+import { validateUpstream } from './repository/upstream.ts';
 
 function main(): number {
   const errors = checkCodeLengths(ROOT);
@@ -16,6 +17,7 @@ function main(): number {
   }
   const evidence = validateEvidence(check);
   validatePackage(check);
+  validateUpstream(check);
   const binaries = validateNative(check, args.includes('--require-all-binaries'));
   for (const error of errors) console.error(`FAIL: ${error}`);
   if (errors.length > 0) return 1;

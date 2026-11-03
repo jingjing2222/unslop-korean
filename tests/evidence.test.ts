@@ -8,7 +8,7 @@ import { test, type TestContext } from 'node:test';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const BIN = process.env.KUW_BIN ?? join(ROOT, 'skills/korean-ux-writing/scripts/bin', `${process.platform}-${process.arch}`, process.platform === 'win32' ? 'kuw.exe' : 'kuw');
+const BIN = process.env.KUW_BIN ?? join(ROOT, 'skills/unslop-korean/scripts/bin', `${process.platform}-${process.arch}`, process.platform === 'win32' ? 'kuw.exe' : 'kuw');
 assert.ok(isAbsolute(BIN), 'KUW_BIN must be an absolute native executable path');
 const MAX_BYTES = 2_000_000;
 const digest = (data: Buffer) => createHash('sha256').update(data).digest('hex');

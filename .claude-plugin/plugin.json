@@ -1,18 +1,19 @@
 {
-  "name": "korean-ux-writing",
+  "name": "unslop-korean",
   "version": "3.2.0",
-  "description": "Review Korean UI copy in the context of the entire user journey, resolve meaning problems, then refine the wording.",
+  "description": "Polish interfaces with unslop’s nine design passes and evidence-based Korean copy review.",
   "author": {
     "name": "jingjing2222",
     "url": "https://github.com/jingjing2222"
   },
-  "homepage": "https://github.com/jingjing2222/korean-ux-writing",
-  "repository": "https://github.com/jingjing2222/korean-ux-writing",
-  "license": "MIT",
+  "homepage": "https://github.com/jingjing2222/unslop-korean",
+  "repository": "https://github.com/jingjing2222/unslop-korean",
+  "license": "CC-BY-4.0 AND MIT",
   "keywords": [
     "korean",
+    "ui-design",
+    "unslop",
     "ux-writing",
-    "frontend",
     "copy-editing"
   ]
 }

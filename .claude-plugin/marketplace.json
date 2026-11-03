@@ -1,14 +1,14 @@
 {
-  "name": "korean-ux-writing",
-  "description": "A plugin for reviewing Korean frontend copy in context.",
+  "name": "unslop-korean",
+  "description": "UI design and Korean copy review, adapted from unslop.",
   "owner": {
     "name": "jingjing2222"
   },
   "plugins": [
     {
-      "name": "korean-ux-writing",
+      "name": "unslop-korean",
       "source": "./",
-      "description": "Review Korean UI copy across the user journey, then refine it using published references."
+      "description": "Nine design passes with evidence-based Korean copy review."
     }
   ]
 }
