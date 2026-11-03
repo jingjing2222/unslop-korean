@@ -1,8 +1,7 @@
 # Korean copy criteria
 
 Apply these within unslop's Copy pass. The screen audit, direction, nine passes,
-check and report remain the workflow. No separate four-stage run or mandatory
-audit report is required.
+check and report remain the workflow.
 
 ## Read the context, then the relevant sources
 
@@ -17,20 +16,7 @@ the meanings before diagnosis. Record the current Korean reading against the
 intended meaning; grammar alone does not establish a good fit. A short label or
 specialist term can already be appropriate in its actual context.
 
-The [rule catalog](rules.json) and [diagnostic catalog](translationese.json) retain
-the existing Korean evidence, scope and exceptions. Fetch the pinned source
-registry with the bundled native executable:
-
-```sh
-<skill-directory>/scripts/kuw evidence --out <working-directory>/sources.json
-```
-
-This verifies the registry hash. It does not verify source truth or copy quality.
-Read the relevant source's `locator`, `claim`, `scope`, `limitations` and
-`verification` before applying its rule. Unavailable or inapplicable evidence
-means holding that judgment. Do not turn partial sources into verified rules.
-Source copies remain outside the installed skill. Runtime details are in
-[runtime.md](runtime.md).
+Read the relevant [Korean criteria](rules.md) and [meaning and expression guidance](translationese.md), including their scope, exceptions and source links. The links point to the preserved source evidence outside the skill. Read the cited source's claim, scope, limitations and verification status before applying it. If evidence is unavailable or inapplicable, hold that judgment. Partial evidence does not establish unverified details. No source-fetching tool is required.
 
 | Question | Existing criteria |
 |---|---|
@@ -51,7 +37,7 @@ every product, and do not translate English word bans into Korean ones.
 
 For each Korean string, retain its original, usage, change/keep/hold decision,
 result and contextual reason with the applicable evidence. These can live in the
-normal unslop audit and final report; there is no required JSON schema. Preserve
+normal unslop audit and final report. Preserve
 foreign-language spans, variables, conditions, amounts and technical identifiers.
 An English-only screen does not need invented Korean rows.
 

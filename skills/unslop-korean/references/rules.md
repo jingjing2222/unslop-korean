@@ -1,0 +1,561 @@
+# 한국어 UX·표현 기준
+
+기존 근거의 적용 범위와 예외를 함께 읽는다. 단어 금칙어나 일괄 치환 규칙이 아니다.
+
+## UX-01 — 다음 행동을 예측할 수 있게 안내한다
+
+**구분**
+
+- ux
+
+**기준**
+
+- 버튼·링크 문구는 실행 직후의 실제 행동이나 목적지를 예측할 수 있어야 한다. 최종 혜택을 중간 단계의 결과처럼 표현하지 않는다.
+
+**적용 범위**
+
+- 액션, 이동, 확인 단계. 퍼널의 실제 전이를 먼저 확인한다.
+
+**예외**
+
+- 주변 맥락으로 목적이 분명한 일반 작업은 짧은 레이블을 유지할 수 있다.
+- 한국어 버튼 어형은 KO-05로 별도 판단한다.
+
+**출처**
+
+- [SRC-001](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-001)
+- [SRC-019](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-019)
+- [SRC-020](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-020)
+- [SRC-038](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-038)
+
+## UX-02 — 입력 대상과 제약을 입력 전에 알린다
+
+**구분**
+
+- ux
+
+**기준**
+
+- 무엇을 입력하거나 선택하는지, 필요한 형식·단위·필수 여부·파일 제한을 사용자가 알 수 있게 한다. 필수 안내를 사라지는 플레이스홀더에만 담지 않는다.
+
+**적용 범위**
+
+- 입력폼, 선택, 날짜, 업로드, 글자 수 제한.
+
+**예외**
+
+- 현재 제품이 요구하지 않는 형식·제약·필수 조건을 추가하지 않는다.
+- 문구만으로 지속 표시를 구현할 수 없으면 구조 개선 필요로 보고한다.
+
+**출처**
+
+- [SRC-021](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-021)
+- [SRC-026](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-026)
+- [SRC-027](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-027)
+- [SRC-028](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-028)
+- [SRC-029](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-029)
+- [SRC-035](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-035)
+
+## UX-03 — 오류 상황과 가능한 해결을 안내한다
+
+**구분**
+
+- ux
+
+**기준**
+
+- 확인된 오류의 종류·발생 지점과 사용자가 실제로 할 수 있는 해결 행동을 안내한다. 서로 다른 오류를 이유 없이 포괄적인 한 문장으로 덮지 않는다.
+
+**적용 범위**
+
+- 입력 오류, 요청 실패, 서비스 오류와 복구 흐름.
+
+**예외**
+
+- 보안상 원인을 구분해 공개할 수 없는 경우 그 제한을 유지한다.
+- 원인·복구 행동을 확인하지 못했으면 만들지 말고 보류한다.
+
+**출처**
+
+- [SRC-002](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-002)
+- [SRC-014](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-014)
+- [SRC-034](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-034)
+
+## UX-04 — 현재 사실과 행동의 결과를 정확하게 말한다
+
+**구분**
+
+- ux
+
+**기준**
+
+- 할 수 없는 일과 행동의 결과를 솔직하게 전달한다. 사실과 제약을 과장 없이 알린다.
+
+**적용 범위**
+
+- 상태·성공·실패·확인·결과 안내. 실제 처리 상태와 퍼널 전이는 코드에서 확인한다.
+
+**예외**
+
+- 접수와 처리 완료를 구분하는 검사는 정확성 원칙을 실행하는 절차이며 새로운 제품 상태를 정하는 규칙이 아니다.
+- 모르는 처리 시점·취소 가능성·보장을 보충하지 않는다.
+
+**출처**
+
+- [SRC-008](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-008)
+- [SRC-038](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-038)
+
+## UX-05 — 결정에 필요한 조건을 보존한다
+
+**구분**
+
+- ux
+
+**기준**
+
+- 동의의 필수·선택 여부와 행동의 중요한 결과를 명확히 알린다. 결제·구독·환불 등 결정에 필요한 조건을 짧게 쓰기 위해 없애지 않는다.
+
+**적용 범위**
+
+- 동의, 거래, 변경·삭제 확인, 중요한 조건 안내.
+
+**예외**
+
+- 법적 의미와 제품 정책은 원본 사양에서 확인한다. 이 규칙은 법률 해석을 제공하지 않는다.
+- 추가 설명의 필요성과 노출 위치는 해당 사용자의 과업에 맞게 판단한다.
+
+**출처**
+
+- [SRC-017](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-017)
+- [SRC-032](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-032)
+- [SRC-038](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-038)
+
+## UX-06 — 검색 결과와 빈 결과를 구분해 알린다
+
+**구분**
+
+- ux
+
+**기준**
+
+- 검색 결과 수와 결과가 없다는 상태를 명확히 전달하고 상황에 맞는 검색 대안을 안내한다.
+
+**적용 범위**
+
+- 검색어 입력과 검색 결과 흐름.
+
+**예외**
+
+- 일반 빈 상태·오류·권한 부족을 검색 결과 없음으로 바꾸지 않는다.
+- 지원하지 않는 필터 초기화나 재검색 기능을 문구로 약속하지 않는다.
+
+**출처**
+
+- [SRC-039](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-039)
+- [SRC-040](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-040)
+
+## UX-07 — 보이는 문구와 접근성 안내가 같은 역할을 전달한다
+
+**구분**
+
+- ux
+
+**기준**
+
+- 레이블·링크·파일명·태그 동작이 화면과 보조 기술에서 같은 대상과 행동을 가리키게 검토한다.
+
+**적용 범위**
+
+- 입력 이름, 링크, 태그 추가·삭제, 첨부파일의 대체 텍스트.
+
+**예외**
+
+- 접근성 이름에 필요한 맥락을 시각적 문구보다 더 담을 수 있다.
+- 코드의 접근성 연결이 잘못되었다면 표현 교정만으로 해결했다고 보고하지 않는다.
+
+**출처**
+
+- [SRC-020](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-020)
+- [SRC-022](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-022)
+- [SRC-028](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-028)
+- [SRC-036](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-036)
+
+## UX-08 — 퍼널에서 같은 대상을 같은 이름으로 안내한다
+
+**구분**
+
+- ux
+
+**기준**
+
+- 같은 기능·화면·정보를 가리키는 본문, 도움말, 링크의 이름을 일관되게 쓴다. 표현을 다양하게 하려고 이미 배운 이름을 바꾸지 않는다.
+
+**적용 범위**
+
+- 앞뒤 단계와 공용 컴포넌트의 용어·도움말 연결.
+
+**예외**
+
+- 서로 다른 대상·상태를 같은 용어로 합치지 않는다.
+- 법률·금융·전문 분야의 의미 차이를 일반적인 동의어로 지우지 않는다.
+
+**출처**
+
+- [SRC-020](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-020)
+- [SRC-024](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-024)
+- [SRC-031](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-031)
+
+## UX-09 — 필요한 정보의 양과 순서를 맞춘다
+
+**구분**
+
+- ux
+
+**기준**
+
+- 사용자가 지금 판단할 핵심을 먼저 알리고 의미 없는 중복을 덜어낸다. 과업 이해에 필요한 상세 정보는 남긴다.
+
+**적용 범위**
+
+- 제목·설명·도움말·공지와 화면 사이의 정보 배치.
+
+**예외**
+
+- 한 화면 한 메시지나 글자 수를 모든 화면에 고정하지 않는다.
+- 짧아졌다는 사실만으로 더 좋은 UX라고 판단하지 않는다.
+
+**출처**
+
+- [SRC-001](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-001)
+- [SRC-015](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-015)
+- [SRC-016](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-016)
+- [SRC-017](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-017)
+- [SRC-033](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-033)
+
+## UX-10 — 대상과 상황에 맞게 안내한다
+
+**구분**
+
+- ux
+
+**기준**
+
+- 사용자의 이해 방식과 사용 상황을 확인한다. 친근함이나 긍정 표현만을 목표로 사실·제약을 흐리지 않는다.
+
+**적용 범위**
+
+- 일반 안내, 제약, 위험, 대상별 문구.
+
+**예외**
+
+- 토스플레이스의 전면 해요체 같은 제품 전용 지침을 다른 제품에 강제하지 않는다.
+- 시니어 연구의 관찰을 모든 사용자에게 일반화하지 않는다.
+- 이 규칙은 새 브랜드 말투를 임의로 정하는 권한이 아니다.
+
+**출처**
+
+- [SRC-006](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-006)
+- [SRC-007](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-007)
+- [SRC-008](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-008)
+- [SRC-018](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-018)
+
+## UX-11 — 전체 과업에서 현재 안내의 목적을 정한다
+
+**구분**
+
+- ux
+
+**기준**
+
+- 사용자가 이루려는 목적, 앞선 안내와 현재 선택, 선택 이후의 결과를 함께 살펴 필요한 안내를 정한다. 시스템 내부 용어나 현재 문구에 사용자의 목적을 맞추지 않는다.
+
+**적용 범위**
+
+- 퍼널과 상태별 안내 의도. 한국어 표현을 평가하기 전에 제품의 실제 전이·조건을 확인한다.
+
+**예외**
+
+- 코드·사양으로 추론한 과업을 실제 사용자 연구 결과라고 보고하지 않는다.
+- 공식 서비스 설계 지침과 개별 제품 사례는 적용 범위가 다르다. 모든 흐름의 정보량·순서를 한 사례에 맞추지 않는다.
+- 같은 키라도 사용 목적이 다르면 의미를 별도로 검토한다. 실제 의미가 같은 공유 문구까지 분리하지 않는다.
+
+**출처**
+
+- [SRC-066](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-066)
+- [SRC-067](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-067)
+- [SRC-069](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-069)
+- [SRC-070](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-070)
+- [SRC-071](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-071)
+- [SRC-072](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-072)
+- [SRC-073](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-073)
+- [SRC-074](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-074)
+
+## UX-12 — 사용자가 알 수 있는 정보로 행동과 결과를 판단한다
+
+**구분**
+
+- ux
+
+**기준**
+
+- 사용자의 과업과 사전 지식을 확인하고, 해당 경로에서 제공되는 단서로 행동을 찾고 기대 효과와 연결하며 결과를 알아볼 수 있는지 살핀다. 평가자의 설명이나 정답 경로로 이해를 유도하지 않는다.
+
+**적용 범위**
+
+- 화면·분기별 이해 가능성과 사용성 사전 점검. 제품의 실제 동작은 별도 사실 자료로 대조한다.
+
+**예외**
+
+- 사용자 조사 자료가 없으면 과업·해석을 검토 가설로 표시한다. 전문가 또는 에이전트 점검은 실제 참여자 관측이 아니다.
+- 이미 노출된 안내를 읽고 기억했다고 확정하지 않는다. 실제 대상 사용자의 전문 지식까지 일괄 배제하지 않는다.
+- 인지적 워크스루는 탐색 학습에 중점을 둔 점검이다. 이 방법만으로 전체 사용성을 보증하지 않는다.
+
+**출처**
+
+- [SRC-076](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-076)
+- [SRC-077](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-077)
+- [SRC-078](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-078)
+- [SRC-079](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-079)
+- [SRC-080](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-080)
+
+## UX-13 — 과업에 필요한 맥락을 적절한 단계에서 제공한다
+
+**구분**
+
+- ux
+
+**기준**
+
+- 사용자가 필요한 맥락을 놓치지 않도록 진입점, 정보 제공 순서와 시점을 과업에 맞춘다. 안내는 필요한 단계에서 이용하고 다시 찾을 수 있어야 한다.
+
+**적용 범위**
+
+- 선행 맥락, 진입·중간 진입, 단계별 안내와 도움말의 배치·재접근.
+
+**예외**
+
+- 모든 정보를 첫 화면에 모으거나 설명·온보딩을 일괄 추가하지 않는다. 필요한 시점은 사용자 과업에 따라 판단한다.
+- GOV.UK의 페이지 형식이나 토스의 특정 설계를 모든 제품에 강제하지 않는다.
+- 선행 맥락 누락을 flow로 기록하고 현재 문구의 설명 추가로 종결하지 않는 절차는 이 근거와 사용자의 작업 요구를 적용한 운영 설계다.
+
+**출처**
+
+- [SRC-078](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-078)
+- [SRC-081](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-081)
+- [SRC-082](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-082)
+- [SRC-083](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-083)
+
+## KO-01 — 의미 없는 표현과 반복을 덜어낸다
+
+**구분**
+
+- ko
+
+**기준**
+
+- 정보·강조·조건을 더하지 않는 단어와 반복 문장을 제거해 핵심을 읽기 쉽게 만든다.
+
+**적용 범위**
+
+- UX 단계에서 필요한 정보를 확정한 한국어 문구.
+
+**예외**
+
+- 조건·부정·예외·숫자·단위를 군더더기로 취급하지 않는다.
+- 특정 단어를 맥락 없이 금칙어로 등록하지 않는다.
+
+**출처**
+
+- [SRC-001](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-001)
+
+## KO-02 — 사용자가 이해하는 한국어를 선택한다
+
+**구분**
+
+- ko
+
+**기준**
+
+- 대상 사용자의 이해를 방해하는 것으로 확인된 용어·표현을 같은 의미를 유지하는 말로 다듬는다. 번역투 여부는 별도 진단 근거로 판단한다.
+
+**적용 범위**
+
+- 기능 설명과 일반 안내의 용어·문장.
+
+**예외**
+
+- 널리 익숙한 외래어를 무조건 순화하지 않는다.
+- 데이터를 정보로 바꾸는 등 의미가 달라질 수 있는 동의어 치환을 자동화하지 않는다.
+- 전문 용어의 정확성이 필요한 경우 뜻을 지키고 설명 필요성을 UX 단계에서 판단한다.
+
+**출처**
+
+- [SRC-008](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-008)
+- [SRC-010](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-010)
+- [SRC-044](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-044)
+
+## KO-03 — 맞춤법과 띄어쓰기를 확인한다
+
+**구분**
+
+- ko
+
+**기준**
+
+- 한글 맞춤법·표준어 규정에 따라 조사·의존명사·보조 용언·활용형·문장부호를 검토한다. 출금하다 같은 접미사 결합과 목적어 구성을 구분한다.
+
+**적용 범위**
+
+- 한국어 표기의 정확성. 구체 규정은 SRC-048의 해당 조항을 읽어 적용한다.
+
+**예외**
+
+- 허용되는 복수 표기 중 하나를 유일한 정답으로 만들지 않는다.
+- 변수·코드 식별자·상표·원문 인용을 일반 문장으로 오인하지 않는다.
+- 표기 규범으로 제품의 말투나 UX 효과를 결정하지 않는다.
+
+**출처**
+
+- [SRC-048](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-048)
+- [SRC-052](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-052)
+
+## KO-04 — 높임과 말투를 문맥에 맞춘다
+
+**구분**
+
+- ko
+
+**기준**
+
+- 사물 높임과 사람에 대한 간접 높임을 구분하고, 신뢰·상황·제품의 문서화된 말투를 고려해 어미를 정돈한다.
+
+**적용 범위**
+
+- 안내·질문·오류 문구의 높임과 문체.
+
+**예외**
+
+- 모든 -시-를 제거하거나 모든 문장을 해요체로 바꾸지 않는다.
+- 친근한 말투를 정확성보다 우선하지 않는다.
+
+**출처**
+
+- [SRC-008](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-008)
+- [SRC-051](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-051)
+
+## KO-05 — 한국어 버튼의 어형을 목적에 맞춘다
+
+**구분**
+
+- ko
+
+**기준**
+
+- 서술성 명사, -기, -하기를 버튼의 역할·길이·변별성과 함께 판단한다. 행동이 명확한 짧은 표현은 유지할 수 있다.
+
+**적용 범위**
+
+- 한국어 액션 레이블. 먼저 UX-01로 실제 행동을 확정한다.
+
+**예외**
+
+- -하기를 일괄 추가하거나 일괄 삭제하지 않는다.
+- 전문가 개인의 제안을 국어 규범이나 모든 제품의 정답으로 취급하지 않는다.
+- 두 Joo Jun 원저술을 함께 읽어 후속 글의 예외를 적용한다.
+
+**출처**
+
+- [SRC-012](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-012)
+- [SRC-013](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-013)
+- [SRC-019](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-019)
+
+## KO-06 — 문장과 제목을 한 번에 이해할 수 있게 정돈한다
+
+**구분**
+
+- ko
+
+**기준**
+
+- UX 단계에서 정한 내용을 보존하며 읽기 어려운 문장 길이와 호흡을 다듬고, 안내문 제목에 본문의 구체적인 내용을 드러낸다.
+
+**적용 범위**
+
+- 한국어 설명·안내문. 짧은 버튼과 일반 서술문은 같은 형태를 강제하지 않는다.
+
+**예외**
+
+- 문장 분할로 조건·수식 관계·행위 주체가 달라지면 안 된다.
+- 공문서의 격식체를 UI 말투로 강제하지 않는다.
+
+**출처**
+
+- [SRC-001](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-001)
+- [SRC-044](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-044)
+- [SRC-049](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-049)
+
+## KO-07 — 뜻과 사용 상황을 한국어 표현으로 다시 구성한다
+
+**구분**
+
+- ko
+
+**기준**
+
+- 확정된 안내 의도를 한국어 작성자의 관점에서 다시 구성한다. 먼저 행동·대상·관계를 잘못 전달하는 어휘와 결합을 바로잡고, 그다음 어미·길이 등을 다듬는다. 진단에서 발견한 차이와 개선 이유를 연결한다.
+
+**적용 범위**
+
+- LT-05에서 검토한 한국어 UI의 명명·행동·설명 표현. 같은 표현도 사용 목적과 대상에 따라 판단한다.
+
+**예외**
+
+- 특정 영어 표현에 고정 대체어를 강제하지 않는다.
+- 제품 사실·대상·조건·약속을 바꾸거나 새 동작을 보충하지 않는다.
+- Microsoft·Mozilla 등 개별 제품의 말투와 용어를 범용 정답으로 삼지 않는다.
+- 전문 용어를 쉬워 보이는 유사어로 바꾸면서 뜻을 달리하지 않는다. 이해 가능성·친숙도에 관한 추정을 사용자 조사 결과로 쓰지 않는다.
+
+**출처**
+
+- [SRC-001](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-001)
+- [SRC-010](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-010)
+- [SRC-014](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-014)
+- [SRC-059](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-059)
+- [SRC-060](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-060)
+- [SRC-061](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-061)
+- [SRC-062](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-062)
+- [SRC-075](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-075)
+
+## KO-08 — 독자가 필요한 뜻을 구체적으로 알 수 있게 쓴다
+
+**구분**
+
+- ko
+
+**기준**
+
+- 독자에게 불필요한 전문 용어·추상적인 명사 묶음을 줄이고, 이 위치에서 필요한 대상·행동·결과·조건이 드러나도록 표현한다. 내부 분류를 그대로 설명하거나 뜻이 비어 있는 절차 문장으로 대신하지 않는다.
+
+**적용 범위**
+
+- 한국어 UI 설명·제목·도움말과 요청된 README·이용 안내. 문구를 읽는 사람과 그 사람이 알아야 할 내용을 먼저 확인한다.
+
+**예외**
+
+- 독자에게 익숙하거나 정확성에 필요한 전문 용어는 유지한다. 한 분야의 전문가를 모든 분야의 전문가로 가정하지 않는다.
+- 모든 명사형·한자어·법률 용어를 금지하지 않는다. 짧은 레이블은 주변에 제공된 맥락과 함께 판단한다.
+- 권리·의무·적용 대상·조건·예외를 보존한다. 권리를 가진 사람을 작성자와 동일시하거나 이용 허용 범위를 넓히지 않는다.
+- GOV.UK의 영어 어형·단어 수·정부 말투를 한국어의 정답으로 적용하지 않는다. 독자 질문·현재 답·유지 이유를 기록하는 절차는 이 근거를 적용한 운영 설계다.
+
+**출처**
+
+- [SRC-008](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-008)
+- [SRC-043](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-043)
+- [SRC-044](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-044)
+- [SRC-049](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-049)
+- [SRC-075](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-075)
+- [SRC-084](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-084)
+- [SRC-085](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-085)
+- [SRC-086](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-086)
+- [SRC-087](https://github.com/jingjing2222/unslop-korean/blob/faa87bfa96a4fae2290d964e29c6d9db11d7d897/docs/evidence/sources.md#src-087)
+

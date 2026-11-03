@@ -29,12 +29,10 @@ License: MIT
 Full terms, including the copyright notice and warranty disclaimer:
   skills/unslop-korean/LICENSE-MIT
 
-This covers the independently authored Korean copy guides, rule and diagnostic
-catalogs, audit tooling, tests and project documentation. It does not relicense
+This covers the independently authored Korean copy guides, tests and project documentation. It does not relicense
 upstream-derived design files, reference images or external source publications.
 
-Third-party runtime components and source publications
+External source publications
 -----------------------------------------------------
-Runtime notices remain in skills/unslop-korean/scripts/bin/<target>/licenses/.
 External evidence publications retain their respective terms. Links and source
 summaries do not grant rights to reproduce those publications.

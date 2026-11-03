@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "unslop-korean",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Polish interfaces with unslop’s nine design passes and evidence-based Korean copy review.",
   "author": {
     "name": "jingjing2222",
@@ -22,7 +22,7 @@
       "interface": {
         "displayName": "Unslop Korean",
         "shortDescription": "Polish UI design and Korean copy",
-        "longDescription": "Adapted from unslop by Damir Sokolovsky: spacing, color, icons, Korean copy, type, layout, details, visuals and motion. Korean copy review uses published UX and Korean-language evidence across the affected funnel, preserving other languages. Includes native audit tools. Copy-only requests do not authorize redesign.",
+        "longDescription": "Adapted from unslop by Damir Sokolovsky: spacing, color, icons, Korean copy, type, layout, details, visuals and motion. Korean copy review uses published UX and Korean-language evidence across the affected funnel, preserving other languages. Copy-only requests do not authorize redesign.",
         "developerName": "jingjing2222",
         "category": "Productivity",
         "websiteURL": "https://github.com/jingjing2222/unslop-korean",

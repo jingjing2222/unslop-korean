@@ -1,4 +1,4 @@
-name: Validate native plugin
+name: Validate fork
 
 on: [push, pull_request, workflow_dispatch]
 
@@ -6,58 +6,16 @@ permissions:
   contents: read
 
 jobs:
-  native:
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - runner: macos-14
-            target: darwin-arm64
-          - runner: macos-15-intel
-            target: darwin-x64
-          - runner: ubuntu-22.04
-            target: linux-x64
-          - runner: ubuntu-22.04-arm
-            target: linux-arm64
-          - runner: windows-2022
-            target: win32-x64
-    runs-on: ${{ matrix.runner }}
-    timeout-minutes: 20
+  validate:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
           cache: pnpm
-      - uses: vercel-labs/setup-zig@v1
-        if: runner.os == 'Windows'
-        with:
-          version: '0.16.0'
       - run: pnpm install --frozen-lockfile --ignore-scripts
       - run: pnpm typecheck
-      - name: Verify the published bundles
-        run: pnpm validate --require-all-binaries
-      - name: Test the shipped executable
-        run: pnpm test
-      - name: Remove old bundles before rebuilding this host
-        run: node --input-type=module -e "import { rmSync } from 'node:fs'; rmSync('skills/unslop-korean/scripts/bin', { recursive:true, force:true });"
-      - run: pnpm build
-        env:
-          MACOSX_DEPLOYMENT_TARGET: '14.0'
       - run: pnpm test
       - run: pnpm validate
-      - name: Verify pinned evidence download with the native executable
-        shell: bash
-        run: |
-          executable="skills/unslop-korean/scripts/bin/${{ matrix.target }}/kuw"
-          if [ '${{ runner.os }}' = 'Windows' ]; then executable="${executable}.exe"; fi
-          "$executable" evidence --out .reports/pinned-sources.json
-      - uses: actions/upload-artifact@v4
-        with:
-          name: native-${{ matrix.target }}
-          path: skills/unslop-korean/scripts/bin/${{ matrix.target }}/
-          if-no-files-found: error
-          retention-days: 7

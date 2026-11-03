@@ -1,12 +1,4 @@
 minimumReleaseAgeExclude:
-  - '@scriptc/cli-darwin-arm64@0.4.0'
-  - '@scriptc/cli-darwin-x64@0.4.0'
-  - '@scriptc/cli-linux-arm64-gnu@0.4.0'
-  - '@scriptc/cli-linux-arm64-musl@0.4.0'
-  - '@scriptc/cli-linux-x64-gnu@0.4.0'
-  - '@scriptc/cli-linux-x64-musl@0.4.0'
-  - '@scriptc/cli-win32-x64-msvc@0.4.0'
-  - scriptc@0.4.0
   - '@typescript/typescript-aix-ppc64@7.1.0-beta'
   - '@typescript/typescript-android-arm64@7.1.0-beta'
   - '@typescript/typescript-darwin-arm64@7.1.0-beta'

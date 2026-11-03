@@ -1,10 +1,12 @@
 ---
 name: unslop-korean
-description: Polish AI-looking interfaces with unslop's nine design passes and evidence-based Korean copy review. Use for unslop-korean, 한국어 UI 디자인 개선, 한국어 UX 문구 검토 and 윤문. Preserve existing non-Korean copy and foreign-language spans; copy-only requests do not authorize redesign.
-license: CC-BY-4.0 AND MIT
+description: Uses Korean copy criteria in place of the English copy rules. Turns vibecoded, AI-looking UI into a designed interface with its own character. Finds a direction from the product itself, then fixes spacing, color, icons, copy, type, layout, details, visuals and motion in that order, and can generate a real hero visual with an image tool when one is available. Use when the user asks to unslop, polish, clean up or redesign a screen so it stops looking AI-generated, or when a UI shows the usual tells like purple gradients, glows, gradient text, emoji labels, "New ✨" badges, glossy blobs, uppercase tracked labels, pulsing elements or uneven spacing. Works on React, Tailwind, HTML and CSS, for dashboards, apps and landing pages.
+license: CC-BY-4.0
 metadata:
-  version: "4.0.0"
-  author: "Damir Sokolovsky (upstream design); jingjing2222 (Korean adaptation)"
+  author: Damir Sokolovsky
+  adaptation: jingjing2222
+  x: https://x.com/heydamir
+  site: https://heydamir.design/unslop
 ---
 
 # Unslop Korean
@@ -100,7 +102,7 @@ If the product already has a real brand, like a logo file, a color or a typeface
 
 ## 4. Korean copy
 
-Use [references/korean.md](references/korean.md) for the existing Korean criteria and their source scopes. These replace the upstream English copy rules. They do not add a second workflow: apply them here, then continue to Type.
+Use [references/korean.md](references/korean.md) for the existing Korean criteria and their source scopes. These replace the upstream English copy rules. Apply them here, then continue to Type.
 
 - Read the entire affected funnel before editing words: entry points, earlier promises, branches, exits, recovery and later consequences. Record what the user can expect from the information already shown separately from the behavior verified afterwards. Product implementation is evidence of facts, not a writing standard.
 - Polish existing Korean only. Preserve other-language text and foreign-language spans in mixed strings, including names, commands, identifiers and case. This also applies when another pass suggests changing badges, icons, chart labels or headings. A Korean-only copy request does not authorize visual redesign. If there is no Korean, skip this pass without translating anything.

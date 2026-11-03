@@ -2,68 +2,50 @@
 
 [한국어](README.md) · English
 
-A Korean adaptation of [unslop](https://github.com/heydamir/unslop) that keeps its UI improvement structure and replaces the English copy-editing layer with Korean criteria. It works through spacing, color, icons, copy, type, layout, details, visuals and motion.
+A fork of [unslop](https://github.com/heydamir/unslop) by [Damir Sokolovsky](https://x.com/heydamir), replacing its English copy criteria with Korean criteria. It retains the original screen audit, direction, nine design passes, screenshot tool and story video tool.
 
-Korean copy review starts with the user's available information and complete task, checks meaning, then refines expression. It uses the existing published UX and Korean-language evidence; no English original is needed.
+![An example of unslop improving a screen](skills/unslop-korean/references/refs/story-dashboard-frames.webp)
 
 ## Install
 
-In a Codex terminal:
+For Claude Code, copy the skill folder. For a single project, use `.claude/skills/` instead of `~/.claude/skills/`.
 
 ```sh
-codex plugin marketplace add jingjing2222/unslop-korean
-codex plugin add unslop-korean@unslop-korean
+git clone https://github.com/jingjing2222/unslop-korean
+mkdir -p ~/.claude/skills
+cp -r unslop-korean/skills/unslop-korean ~/.claude/skills/
 ```
 
-In a Claude Code conversation:
+For Codex, make this request or copy the same folder into `~/.agents/skills/`.
 
 ```text
-/plugin marketplace add jingjing2222/unslop-korean
-/plugin install unslop-korean@unslop-korean
+$skill-installer install https://github.com/jingjing2222/unslop-korean/tree/main/skills/unslop-korean
 ```
 
-Start a new conversation after installation. Distribution uses this repository's marketplace, not either product's official plugin catalog. Korean evidence and audit tools are bundled as native executables.
+Existing Codex and Claude Code plugin installation metadata is also included. This fork is not listed in either official plugin directory.
 
-## Use
-
-For design and Korean copy together:
-
-```text
-Use unslop-korean to polish this dashboard.
-Keep its features and content, and review Korean copy across the surrounding user journey.
-```
-
-For copy alone:
-
-```text
-Use unslop-korean to review and polish only the Korean copy in the signup flow.
-```
-
-The skill audits the screen, sets a product-specific direction, then applies nine passes. Screens that already work receive only necessary changes. Copy-only requests do not change the visual design.
-
-## Korean copy review
-
-Review the user's goal, earlier guidance, current choice and later result. Assess meaning at each usage site and record **change, keep or hold**, with reasons. Save the diagnosis before editing, then check the same paths again.
-
-Only existing Korean is polished. Other languages and foreign-language spans in mixed text are preserved. Translation, editing other languages and new content require separate requests. Greetings, exclamation marks and periods are not blanket violations, and no single tone is imposed on every sentence.
-
-When prerequisite information is missing, identify where it first needs to appear. Retain unresolved flow problems and unverified screens in the result even after copy edits are finished. Distinguish agent review from observed participant testing.
-
-In the [evidence documentation](docs/evidence/README.md), UX sources support what to communicate and when; Korean sources support expression. Product code establishes actual behavior. Unslop's design suggestions are not Korean writing authorities.
-
-Screen snapshots and before/after videos use the original unslop Node.js and Playwright scripts. Install these dependencies in the project where you use them. Video rendering also needs ffmpeg on PATH.
+Live-site capture and story videos use the original Node.js and Playwright tools. Install these in the project where you run them. Video also requires ffmpeg on PATH.
 
 ```sh
 pnpm add -D playwright
 pnpm exec playwright install chromium
 ```
 
-[Skill instructions](skills/unslop-korean/SKILL.md) · [Supported platforms](skills/unslop-korean/references/runtime.md) · [Development](docs/development.md)
+## Use
 
-Original design examples are in [examples](examples). Their English copy remains unchanged; they are visual design examples.
+Use `/unslop-korean` in Claude Code or `$unslop-korean` in Codex.
 
-## Attribution and licenses
+```text
+/unslop-korean polish this dashboard
+/unslop-korean polish this landing page and make the story video
+```
 
-Original unslop was created by [Damir Sokolovsky](https://x.com/heydamir). Its design guidance, reference images, snapshot/story scripts, examples and adaptations retain [CC BY 4.0](skills/unslop-korean/LICENSE-CC-BY-4.0). Redistribution must retain author credit, the source link, license and change notice. See [attribution and changes](skills/unslop-korean/UPSTREAM.md) for scope.
+The skill audits the screen, sets a direction from the product, then improves spacing, color, icons, copy, type, layout, details, visuals and motion in order. A well-designed screen receives only the refinements it needs.
 
-This project's existing Korean guidance and original code remain under [MIT](skills/unslop-korean/LICENSE-MIT). External evidence documents retain their own terms. Runtime licenses are in `licenses/` beside each executable.
+Korean copy is judged against the user's task, surrounding journey and verified behavior. The existing [UX and Korean evidence](docs/evidence/README.md) supplies scoped criteria and exceptions; English word bans and punctuation rules are not translated into universal Korean rules. Other languages and foreign-language spans in mixed copy are preserved. A Korean-copy-only request does not change the design.
+
+[Skill instructions](skills/unslop-korean/SKILL.md) · [Original examples](examples) · [Development and validation](docs/development.md)
+
+## Attribution and license
+
+The original unslop was created by Damir Sokolovsky. Original and derived design guidance, images, scripts and examples retain [CC BY 4.0](skills/unslop-korean/LICENSE-CC-BY-4.0). Independently authored Korean criteria and validation code use [MIT](skills/unslop-korean/LICENSE-MIT). External evidence publications retain their respective terms. See [attribution and changes](skills/unslop-korean/UPSTREAM.md).

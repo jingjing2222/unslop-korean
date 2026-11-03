@@ -1,6 +1,6 @@
 # References
 
-Finished screens by Damir Sokolovsky ([@heydamir](https://x.com/heydamir)). Look at them before the Visuals pass. Take their qualities, never their subject, palette or layout, so every product still gets its own screen. These are upstream English-language visual references, not Korean writing examples. Preserve their attribution; do not infer Korean copy rules from the pictured text.
+Finished screens by Damir Sokolovsky ([@heydamir](https://x.com/heydamir)). Look at them before the Visuals pass. Take their qualities, never their subject, palette or layout, so every product still gets its own screen. `unslop-dashboard-after` is the finished version of `examples/dashboard.html`, so when you unslop that example, find your own answer instead of rebuilding it.
 
 | File | What it shows | Why it works |
 | --- | --- | --- |
@@ -15,5 +15,3 @@ What they share: one bright element per screen, quiet chrome around it, a visual
 ---
 
 Part of unslop by Damir Sokolovsky ([@heydamir](https://x.com/heydamir)), CC BY 4.0. Keep this credit in copies and adaptations.
-
-Modified for Unslop Korean: English copy guidance and Korean applicability were adjusted. See [attribution and changes](../UPSTREAM.md). This adaptation retains CC BY 4.0.
