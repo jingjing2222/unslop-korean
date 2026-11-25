@@ -7,7 +7,7 @@ const walk = (dir: string): string[] => readdirSync(dir, { withFileTypes: true }
 
 test('installed scripts contain only the upstream screenshot and story tools', () => {
   const files = walk('skills/unslop-korean/scripts').map(file => file.split('/scripts/')[1]);
-  const allowed = ['snapshot.mjs', 'story.mjs'];
+  const allowed = ['snapshot.mjs', 'story-path.mjs', 'story.mjs'];
   assert.deepEqual(files.sort(), allowed.sort());
 });
 

@@ -8,12 +8,11 @@ A fork of [unslop](https://github.com/heydamir/unslop) by [Damir Sokolovsky](htt
 
 ## Install
 
-For Claude Code, copy the skill folder. For a single project, use `.claude/skills/` instead of `~/.claude/skills/`.
+Install the Claude Code plugin from your terminal, then start a new session.
 
 ```sh
-git clone https://github.com/jingjing2222/unslop-korean
-mkdir -p ~/.claude/skills
-cp -r unslop-korean/skills/unslop-korean ~/.claude/skills/
+claude plugin marketplace add jingjing2222/unslop-korean
+claude plugin install unslop-korean@unslop-korean
 ```
 
 For Codex, make this request or copy the same folder into `~/.agents/skills/`.
@@ -22,7 +21,13 @@ For Codex, make this request or copy the same folder into `~/.agents/skills/`.
 $skill-installer install https://github.com/jingjing2222/unslop-korean/tree/main/skills/unslop-korean
 ```
 
-Existing Codex and Claude Code plugin installation metadata is also included. This fork is not listed in either official plugin directory.
+For Google Antigravity, clone the repository and copy the skill folder.
+
+```sh
+git clone https://github.com/jingjing2222/unslop-korean
+mkdir -p ~/.gemini/config/skills
+cp -r unslop-korean/skills/unslop-korean ~/.gemini/config/skills/
+```
 
 Live-site capture and story videos use the original Node.js and Playwright tools. Install these in the project where you run them. Video also requires ffmpeg on PATH.
 

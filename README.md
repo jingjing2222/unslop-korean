@@ -8,12 +8,11 @@
 
 ## 설치
 
-Claude Code에서는 스킬 폴더를 복사하세요. 현재 프로젝트에서만 사용하려면 `~/.claude/skills/` 대신 `.claude/skills/`를 사용합니다.
+Claude Code에서는 터미널에서 플러그인을 설치한 뒤 새 세션을 여세요.
 
 ```sh
-git clone https://github.com/jingjing2222/unslop-korean
-mkdir -p ~/.claude/skills
-cp -r unslop-korean/skills/unslop-korean ~/.claude/skills/
+claude plugin marketplace add jingjing2222/unslop-korean
+claude plugin install unslop-korean@unslop-korean
 ```
 
 Codex에서는 다음과 같이 요청하거나, 같은 폴더를 `~/.agents/skills/`에 복사하세요.
@@ -22,7 +21,13 @@ Codex에서는 다음과 같이 요청하거나, 같은 폴더를 `~/.agents/ski
 $skill-installer install https://github.com/jingjing2222/unslop-korean/tree/main/skills/unslop-korean
 ```
 
-Codex·Claude Code 플러그인으로도 설치할 수 있습니다. 공식 플러그인 목록에는 등록되어 있지 않습니다.
+Google Antigravity에서는 저장소를 내려받은 뒤 스킬 폴더를 복사하세요.
+
+```sh
+git clone https://github.com/jingjing2222/unslop-korean
+mkdir -p ~/.gemini/config/skills
+cp -r unslop-korean/skills/unslop-korean ~/.gemini/config/skills/
+```
 
 웹사이트 화면을 저장하거나 개선 전후를 영상으로 만들 때는 Node.js와 Playwright가 필요합니다. 이 기능을 사용할 프로젝트에서 아래 명령을 실행하세요. 영상을 만들려면 ffmpeg도 설치하고 터미널에서 실행할 수 있도록 PATH에 추가해야 합니다.
 
