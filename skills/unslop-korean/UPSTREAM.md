@@ -3,13 +3,13 @@
 Unslop Korean adapts [unslop](https://github.com/heydamir/unslop) by
 Damir Sokolovsky ([@heydamir](https://x.com/heydamir)), creator of the
 [Unslopping series](https://x.com/heydamir/status/2115063463063998736).
-Upstream snapshot: commit `a6f121eee5f29c2f74976b75456feae8b66afb3a`.
+Upstream snapshot: commit `620163eedb3529d9cd23a3994ed8d287d06f760d`.
 This adaptation is not endorsed by the original author.
 Original citation metadata is retained in [UPSTREAM.cff](UPSTREAM.cff).
 
 The design workflow in `SKILL.md`, `references/signs.md`, `tokens.md`,
 `visuals.md`, `effects.md`, `refs.md`, the images in `references/refs/`,
-`scripts/snapshot.mjs`, `scripts/story.mjs`,
+`references/rtl.md`, the snapshot and story scripts, their adapted repository tests,
 and the repository’s `examples/` directory
 derive from unslop and retain [CC BY 4.0](LICENSE-CC-BY-4.0).
 This includes our modifications to those derived files. License terms and
@@ -28,6 +28,7 @@ Changes in this adaptation:
   while preserving other-language text. The Latin font table remains a visual reference.
 - Route copy-only requests directly to Korean review. Design suggestions cannot
   expand language-editing permission or erase necessary information.
+- Apply RTL design guidance while preserving non-Korean wording, punctuation and digits.
 - Keep the upstream Node/Playwright snapshot and video tools unchanged.
 - Retain the upstream reference images as visual examples, not Korean prose evidence.
 
