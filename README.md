@@ -2,7 +2,7 @@
 
 한국어 · [English](README.en.md)
 
-Unslop Korean은 제품의 성격에 맞게 화면을 다듬고, 사용자가 다음에 할 일을 알 수 있도록 한국어 문구를 고치는 스킬입니다. Damir Sokolovsky의 [unslop](https://github.com/heydamir/unslop)을 포크해 원본의 디자인 작업 방식과 캡처·영상 도구를 유지하고, 영어 문구 편집 기준을 한국어에 맞는 기준으로 바꿨습니다.
+Unslop Korean은 웹 화면의 디자인과 한국어 문구를 다듬는 스킬입니다. Damir Sokolovsky가 만든 [unslop](https://github.com/heydamir/unslop)의 디자인 점검 방식과 화면 캡처·영상 도구를 그대로 쓰고, 문구를 고칠 때는 한국어 기준을 따릅니다.
 
 ![대시보드의 간격과 색상, 글꼴이 달라지는 과정을 담은 영상의 주요 장면](skills/unslop-korean/references/refs/story-dashboard-frames.webp)
 
@@ -11,26 +11,28 @@ Unslop Korean은 제품의 성격에 맞게 화면을 다듬고, 사용자가 �
 Codex에서는 `$unslop-korean`, Claude Code에서는 `/unslop-korean` 뒤에 원하는 작업을 적으세요.
 
 ```text
-$unslop-korean 결제 화면에서 버튼을 누르면 어떤 일이 일어나는지 알 수 있게 한국어 문구만 다듬어 줘.
+$unslop-korean 이 결제 화면에서 버튼을 누르면 바로 결제되는지, 주문을 한 번 더 확인하는지 살펴보고 버튼 문구를 다듬어 줘.
 ```
 
 ```text
-/unslop-korean 이 랜딩 페이지를 다듬고, 바꾸기 전과 후를 영상으로 보여 줘.
+/unslop-korean 이 랜딩 페이지를 다듬고, 화면이 어떻게 달라지는지 영상으로 보여 줘.
 ```
 
-화면 전체를 맡기면 먼저 어디를 손볼지 살핍니다. 크게 고쳐야 할 때는 제품에 어울리는 방향을 정하고 간격, 색상, 아이콘, 문구, 글꼴, 배치, 세부 요소, 이미지, 움직임 순서로 다듬습니다. 이미 방향이 잘 잡힌 화면은 어색한 부분만 고칩니다.
+화면 전체를 다듬을 때는 먼저 어디를 왜 고칠지 살핍니다. 간격만 어긋났다면 간격만 맞춥니다. 화면을 전반적으로 손볼 때는 제품에 어울리는 디자인을 정한 뒤 간격, 색상, 아이콘, 문구, 글꼴, 배치, 세부 요소, 이미지, 움직임 순으로 고칩니다.
 
-한국어 문구만 요청하면 현재 디자인을 유지합니다. 사용자가 앞에서 어떤 안내를 받았는지, 버튼을 누르면 실제로 어떤 일이 일어나는지 확인해 그 흐름에 맞게 표현을 고칩니다. 한국어 문장에 섞인 외국어 표기와 다른 언어로 쓴 문구는 보존합니다. 문구를 검토할 때 참고하는 자료와 각 기준의 적용 범위는 [한국어·UX 자료](docs/evidence/README.md)에서 확인할 수 있습니다.
+한국어 문구만 맡길 수도 있습니다. 예를 들어 결제 버튼을 누르면 주문 확인 화면이 열리는 경우, 버튼만 보고도 주문을 한 번 더 확인한다는 점을 알 수 있게 문구를 다듬습니다. 이때 화면 디자인과 외국어 문구, 한국어 문장에 섞인 외국어 표기는 그대로 둡니다. 어떤 근거로 문구를 고치는지는 [한국어·UX 자료](docs/evidence/README.md)에서 살펴볼 수 있습니다.
 
 ## 설치
 
 ### Codex
 
-Codex 대화창에 아래 요청을 입력하세요. 직접 설치하려면 이 저장소의 `skills/unslop-korean` 폴더를 `~/.agents/skills/` 아래에 복사하세요.
+Codex 대화창에 다음과 같이 입력하세요.
 
 ```text
 $skill-installer install https://github.com/jingjing2222/unslop-korean/tree/main/skills/unslop-korean
 ```
+
+직접 설치하려면 이 저장소의 `skills/unslop-korean` 폴더를 `~/.agents/skills/`에 복사하세요.
 
 ### Claude Code
 
@@ -43,7 +45,7 @@ claude plugin install unslop-korean@unslop-korean
 
 ### Google Antigravity
 
-저장소를 내려받고 스킬 폴더를 Google Antigravity의 전역 스킬 디렉터리에 복사하세요.
+다음 명령으로 저장소를 내려받고 스킬을 설치하면 모든 Google Antigravity 프로젝트에서 쓸 수 있습니다.
 
 ```sh
 git clone https://github.com/jingjing2222/unslop-korean
@@ -53,14 +55,14 @@ cp -r unslop-korean/skills/unslop-korean ~/.gemini/config/skills/
 
 ### 화면 캡처와 영상 제작
 
-웹페이지나 로컬 HTML 파일을 캡처하려면 Node.js가 필요합니다. 작업할 프로젝트에서 Playwright와 Chromium을 설치하세요.
+웹페이지나 로컬 HTML 파일을 캡처할 때는 Node.js와 Playwright, Chromium이 필요합니다. Node.js와 pnpm이 설치된 환경에서 작업할 프로젝트 폴더를 열고 다음 명령을 실행하세요.
 
 ```sh
 pnpm add -D playwright
 pnpm exec playwright install chromium
 ```
 
-변경 과정을 영상으로 만들려면 ffmpeg도 설치하세요. 터미널에서 `ffmpeg -version`을 실행하면 설치 상태를 확인할 수 있습니다.
+영상도 만들려면 ffmpeg를 설치하세요. 터미널에서 `ffmpeg -version`을 입력해 버전이 나오면 사용할 수 있습니다.
 
 [스킬 지침](skills/unslop-korean/SKILL.md) · [원본 예제](examples) · [개발 및 검증 방법](docs/development.md)
 
